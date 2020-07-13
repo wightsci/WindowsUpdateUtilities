@@ -1,3 +1,4 @@
+Function Download-WindowsUpdates {
 [CmdletBinding()]
 Param()
 
@@ -68,4 +69,5 @@ For ($I = 0; $I -le $SearchResult.Updates.Count-1; $I++) {
 If ($UpdateInstallCollection.Count  -eq 0) {
     Write-Output "No updates were able to be downloaded."
     Exit
+}
 }

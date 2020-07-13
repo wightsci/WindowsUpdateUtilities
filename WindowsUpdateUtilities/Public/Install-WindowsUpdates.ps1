@@ -1,3 +1,4 @@
+Function Install-WindowsUpdates {
 [CmdletBinding()]
 Param()
 
@@ -23,4 +24,5 @@ If ($Install.ToLower() -eq 'y') {
         Write-Output "$($I + 1)> $($Update.Title): $($UpdateInstallResult.GetUpdateResult($I).Resultcode)"
     }
 
+}
 }
