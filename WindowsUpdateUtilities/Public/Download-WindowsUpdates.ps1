@@ -38,7 +38,7 @@ For ($I = 0; $I -le $SearchResult.Updates.Count-1; $I++) {
 
 If ($UpdateCollection.Count -eq 0) {
     Write-OutPut "All applicable update were skipped."
-    Exit
+    End
 }
 
 Write-Output "Dowloading updates..."
