@@ -1,4 +1,4 @@
-Function Get-WindowsUpdates{
+Function Get-WindowsUpdateList{
 [CmdletBinding()]
 Param()
 
