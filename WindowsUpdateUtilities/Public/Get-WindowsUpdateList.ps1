@@ -1,3 +1,4 @@
+Function Get-WindowsUpdates{
 [CmdletBinding()]
 Param()
 
@@ -15,4 +16,5 @@ Write-Output "List of applicable updates on the machine:"
 For ($I = 0; $I -le $SearchResult.Updates.Count-1; $I++) {
     $Update = $SearchResult.Updates.Item($I)
     Write-Output "$($I + 1)> $($Update.Title)"
+}
 }
