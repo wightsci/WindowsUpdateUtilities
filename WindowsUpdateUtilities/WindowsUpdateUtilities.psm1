@@ -143,6 +143,7 @@ $UpdateServiceManager = New-Object -ComObject "Microsoft.Update.ServiceManager"
 
 # Loader for external modules
 $ScriptRoot = Split-Path $Script:MyInvocation.MyCommand.Path
+Write-Verbose $ScriptRoot
 $Public = @( Get-ChildItem -Path $ScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
 $Private = @( Get-ChildItem -Path $ScriptRoot\Private\*.ps1 -ErrorAction SilentlyContinue )
 @($Public + $Private) | Foreach-Object { . $_.FullName ; Write-Verbose $_.FullName}
